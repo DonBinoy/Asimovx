@@ -6,6 +6,11 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Preloader from "@/components/Preloader";
 
+export const metadata: Metadata = {
+  title: "ASIMOVX | Premium AI Tech Consulting",
+  description: "Industry leading tech consulting to unlock the potential of AI in your business.",
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
