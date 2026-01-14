@@ -1,0 +1,42 @@
+<svg width="512" height="512" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9033FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D946EF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g stroke="url(#logoGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    
+    <!-- Perimeter Chevrons -->
+    <path d="M50,10 L84.64,30" /> <!-- Top to TopRight -->
+    <path d="M50,10 L15.36,30" /> <!-- Top to TopLeft -->
+    <path d="M50,90 L84.64,70" /> <!-- Bot to BotRight -->
+    <path d="M50,90 L15.36,70" /> <!-- Bot to BotLeft -->
+
+    <!-- Vertical Center Axis -->
+    <path d="M50,10 L50,90" />
+
+    <!-- Center X Spokes (Connecting Center to Corners) -->
+    <path d="M50,50 L84.64,30" /> <!-- Center to TopRight -->
+    <path d="M50,50 L15.36,30" /> <!-- Center to TopLeft -->
+    <path d="M50,50 L84.64,70" /> <!-- Center to BotRight -->
+    <path d="M50,50 L15.36,70" /> <!-- Center to BotLeft -->
+    
+    <!-- Long Diagonals (Requested Additions) -->
+    <path d="M50,10 L15.36,70" /> <!-- Top to BotLeft -->
+    <path d="M50,10 L84.64,70" /> <!-- Top to BotRight -->
+    <path d="M50,90 L15.36,30" /> <!-- Bot to TopLeft -->
+    <path d="M50,90 L84.64,30" /> <!-- Bot to TopRight -->
+
+    <!-- Nodes with holes (filled black) -->
+    <g fill="#000000" stroke="url(#logoGradient)" stroke-width="4">
+      <circle cx="50" cy="10" r="5" />
+      <circle cx="84.64" cy="30" r="5" />
+      <circle cx="84.64" cy="70" r="5" />
+      <circle cx="50" cy="90" r="5" />
+      <circle cx="15.36" cy="70" r="5" />
+      <circle cx="15.36" cy="30" r="5" />
+      <circle cx="50" cy="50" r="5" />
+    </g>
+  </g>
+</svg>
