@@ -7,7 +7,7 @@ import NextImage from 'next/image';
 import { Globe } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
-import { ThemeToggle } from './ThemeToggle';
+
 
 const Navbar = () => {
     const { language, setLanguage, t } = useLanguage();
@@ -67,7 +67,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex gap-6 items-center border-l-2 border-white/10 dark:border-white/10 border-black/10 pl-6">
-                        <ThemeToggle />
+
 
                         <div className="relative">
                             <button
@@ -143,7 +143,7 @@ const Navbar = () => {
                         <div className="w-12 h-[1px] bg-white/10" />
 
                         <div className="flex items-center gap-8">
-                            <ThemeToggle />
+
                             <div className="flex gap-4 text-xs font-bold tracking-widest">
                                 {['EN', 'ES', 'SV', 'DA'].map((lang) => (
                                     <button

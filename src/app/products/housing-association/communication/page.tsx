@@ -65,7 +65,8 @@ export default function CommunicationPage() {
                             <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-10 shadow-2xl shadow-blue-500/30">
                                 <MessageSquare className="w-10 h-10" />
                             </div>
-                            <h1 className="text-7xl md:text-[8rem] font-serif font-medium tracking-tight leading-[0.9] mb-10 text-[#111]">
+
+                            <h1 className="text-5xl md:text-[8rem] font-serif font-medium tracking-tight leading-[0.9] mb-10 text-[#111]">
                                 Unified <br />
                                 <span className="italic text-blue-500">Voice.</span>
                             </h1>
@@ -93,7 +94,7 @@ export default function CommunicationPage() {
                         className="relative h-[800px] w-full flex items-center justify-center perspective-[2000px]"
                     >
                         {/* Main Phone */}
-                        <div className="w-[380px] h-[750px] bg-[#111] rounded-[3rem] border-8 border-[#222] shadow-[0_50px_100px_-20px_rgba(30,58,138,0.3)] overflow-hidden relative transform rotate-y-[-12deg] rotate-x-[5deg] z-10">
+                        <div className="w-[300px] md:w-[380px] h-[600px] md:h-[750px] bg-[#111] rounded-[2.5rem] md:rounded-[3rem] border-8 border-[#222] shadow-[0_50px_100px_-20px_rgba(30,58,138,0.3)] overflow-hidden relative transform rotate-y-[-12deg] rotate-x-[5deg] z-10">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-[#222] rounded-b-xl z-20" />
                             <div className="h-full w-full bg-white flex flex-col pt-12">
                                 <div className="px-6 pb-4 border-b border-slate-100 flex justify-between items-center bg-white z-10">
@@ -143,11 +144,72 @@ export default function CommunicationPage() {
                             </div>
                         </FloatingElement>
                     </motion.div>
+                </div >
+            </section >
+
+            {/* FEATURES GRID */}
+            < section className="py-24 bg-white relative z-20" >
+                <div className="max-w-[1400px] mx-auto px-6">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl md:text-5xl font-serif text-[#111] mb-6">Board to Resident Flow</h2>
+                        <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+                            A dedicated channel for official, one-way communication from the board to the residents.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Board Announcements",
+                                desc: "Board can post official news and updates in one central place.",
+                                benefit: "Residents know where to find reliable information"
+                            },
+                            {
+                                title: "Targeted Messages",
+                                desc: "Send messages to all residents or selected buildings/sections.",
+                                benefit: "Avoids unnecessary messages"
+                            },
+                            {
+                                title: "Email Notifications",
+                                desc: "Automatic emails for new announcements.",
+                                benefit: "Ensures high visibility"
+                            },
+                            {
+                                title: "Message Read Status",
+                                desc: "Track whether residents have read important notices.",
+                                benefit: "Confirms information has been received"
+                            },
+                            {
+                                title: "Push Notifications",
+                                desc: "Alerts for urgent or time-sensitive updates.",
+                                benefit: "Faster communication when needed"
+                            },
+                            {
+                                title: "Vendor Communication",
+                                desc: "Communicate with external vendors directly through the system.",
+                                benefit: "Keeps all communication documented in one place"
+                            }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-[#F9F8F6] p-8 rounded-[2rem] hover:shadow-lg transition-shadow border border-slate-100">
+                                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 text-blue-500">
+                                    <MessageSquare className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-[#111] mb-3">{item.title}</h3>
+                                <p className="text-slate-600 mb-6 leading-relaxed min-h-[3rem]">
+                                    {item.desc}
+                                </p>
+                                <div className="flex items-start gap-2 text-sm text-blue-600 font-medium bg-blue-50/50 p-3 rounded-xl">
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
+                                    <span>{item.benefit}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </section>
+            </section >
 
             {/* LIFESTYLE / CONTEXT */}
-            <section className="py-20 lg:py-32">
+            < section className="py-20 lg:py-32" >
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 px-6 h-[600px]">
                     <div className="md:col-span-8 h-full rounded-[3rem] overflow-hidden relative group shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="People talking" />
@@ -166,8 +228,8 @@ export default function CommunicationPage() {
                         <p className="text-sm opacity-40">Based on user surveys 2024.</p>
                     </div>
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 }

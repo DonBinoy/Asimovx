@@ -63,7 +63,7 @@ export default function DocumentsPage() {
                             <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white mb-10 shadow-2xl shadow-emerald-500/30">
                                 <FolderOpen className="w-10 h-10" />
                             </div>
-                            <h1 className="text-7xl md:text-[8rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
+                            <h1 className="text-5xl md:text-[8rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
                                 Digital <br /> <span className="italic text-emerald-600">Memory.</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-lg mb-12">
@@ -89,7 +89,7 @@ export default function DocumentsPage() {
                             className="relative z-10 grid gap-4"
                         >
                             {[1, 2, 3].map((i) => (
-                                <div key={i} className={`w-[500px] h-[150px] bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center p-8 gap-6 transform translate-x-${i * 10} hover:-translate-x-10 transition-transform duration-500`}>
+                                <div key={i} className={`w-full max-w-[500px] h-[150px] bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center p-8 gap-6 transform translate-x-${i * 5} md:translate-x-${i * 10} hover:-translate-x-10 transition-transform duration-500`}>
                                     <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-500">
                                         <FileText className="w-8 h-8" />
                                     </div>

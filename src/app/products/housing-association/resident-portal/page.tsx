@@ -64,7 +64,7 @@ export default function ResidentPage() {
                             <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-cyan-400 to-sky-500 flex items-center justify-center text-white mb-10 shadow-2xl shadow-cyan-400/30">
                                 <User className="w-10 h-10" />
                             </div>
-                            <h1 className="text-7xl md:text-[9rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
+                            <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
                                 Your <br /> <span className="italic text-cyan-600">Home.</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-2xl mb-12">
@@ -88,7 +88,7 @@ export default function ResidentPage() {
                             initial={{ rotateY: -20, rotateX: 10, scale: 0.8, opacity: 0 }}
                             animate={{ rotateY: -10, rotateX: 5, scale: 1, opacity: 1 }}
                             transition={{ duration: 1.5 }}
-                            className="w-[600px] h-[700px] bg-white rounded-[3rem] shadow-2xl border border-slate-100 p-10 relative z-10 overflow-hidden"
+                            className="w-full max-w-[600px] h-[600px] md:h-[700px] bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-100 p-6 md:p-10 relative z-10 overflow-hidden"
                         >
                             <div className="flex items-center gap-6 mb-10 border-b border-slate-100 pb-8">
                                 <div className="w-20 h-20 rounded-full bg-slate-200" />

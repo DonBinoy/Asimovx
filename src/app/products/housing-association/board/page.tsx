@@ -62,7 +62,7 @@ export default function BoardPage() {
                             <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-rose-500 to-red-600 flex items-center justify-center text-white mb-10 shadow-2xl shadow-rose-500/30">
                                 <CheckSquare className="w-10 h-10" />
                             </div>
-                            <h1 className="text-8xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.85] mb-12 text-[#111]">
+                            <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.85] mb-12 text-[#111]">
                                 Board <br /> <span className="italic text-rose-600">Control.</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-lg mb-12">
@@ -85,7 +85,7 @@ export default function BoardPage() {
                             initial={{ rotateX: 20, rotateZ: 5, scale: 0.9, opacity: 0 }}
                             animate={{ rotateX: 10, rotateZ: 0, scale: 1, opacity: 1 }}
                             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                            className="w-full max-w-lg bg-[#111] rounded-[3rem] p-10 md:p-12 shadow-[0_50px_100px_-20px_rgba(225,29,72,0.3)] text-white relative z-10 border border-white/10"
+                            className="w-full max-w-lg bg-[#111] rounded-[3rem] p-8 md:p-12 shadow-[0_50px_100px_-20px_rgba(225,29,72,0.3)] text-white relative z-10 border border-white/10"
                         >
                             <div className="flex justify-between items-center mb-12">
                                 <h3 className="text-3xl font-serif font-medium">To-Do</h3>

@@ -63,7 +63,7 @@ export default function BookingPage() {
                             <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white mb-10 shadow-2xl shadow-violet-500/30">
                                 <CalendarDays className="w-10 h-10" />
                             </div>
-                            <h1 className="text-8xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.8] mb-10 text-[#111] -ml-1">
+                            <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.8] mb-10 text-[#111] -ml-1">
                                 Book <br />
                                 <span className="italic text-violet-600">Smart.</span>
                             </h1>
@@ -91,7 +91,7 @@ export default function BookingPage() {
                             initial={{ rotateY: 15, rotateX: 5, scale: 0.9, opacity: 0 }}
                             animate={{ rotateY: -10, rotateX: 5, scale: 1, opacity: 1 }}
                             transition={{ duration: 1.5 }}
-                            className="w-[700px] h-[600px] bg-white rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(109,40,217,0.2)] p-12 relative z-10 overflow-hidden border border-violet-100"
+                            className="w-full max-w-[700px] h-[500px] md:h-[600px] bg-white rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(109,40,217,0.2)] p-6 md:p-12 relative z-10 overflow-hidden border border-violet-100"
                         >
                             <div className="flex justify-between items-end mb-12">
                                 <div>
@@ -142,7 +142,7 @@ export default function BookingPage() {
             {/* LIFESTYLE */}
             <section className="py-20 px-6">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 h-[500px]">
-                    <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl">
+                    <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl max-h-[400px] md:max-h-full">
                         <img src="https://images.unsplash.com/photo-1545124132-ad94236e792f?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Laundry Room" />
                         <div className="absolute inset-0 bg-violet-900/30 mix-blend-multiply" />
                         <div className="absolute bottom-10 left-10 text-white max-w-sm">
@@ -150,8 +150,8 @@ export default function BookingPage() {
                             <p className="opacity-90">Maximize utilization of common resources without the headache.</p>
                         </div>
                     </div>
-                    <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1522771753062-81c9849557b6?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest room" />
+                    <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl max-h-[400px] md:max-h-full">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest room" />
                         <div className="absolute inset-0 bg-purple-900/30 mix-blend-multiply" />
                         <div className="absolute bottom-10 left-10 text-white max-w-sm">
                             <h3 className="text-3xl font-serif mb-2">Guest Apartments.</h3>
