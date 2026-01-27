@@ -11,6 +11,7 @@ import {
     PieChart,
     Shield
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -33,6 +34,8 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 }
 
 export default function DocumentsPage() {
+    const { t } = useLanguage();
+
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
@@ -64,16 +67,16 @@ export default function DocumentsPage() {
                                 <FolderOpen className="w-10 h-10" />
                             </div>
                             <h1 className="text-5xl md:text-[8rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
-                                Digital <br /> <span className="italic text-emerald-600">Memory.</span>
+                                {t('housing_association.documents.hero.title_1')} <br /> <span className="italic text-emerald-600">{t('housing_association.documents.hero.title_2')}</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-lg mb-12">
-                                The institutional brain of your association. <br /> Secure, searchable, and safe forever.
+                                {t('housing_association.documents.hero.description')}
                             </p>
 
                             {/* Search Bar Visual */}
                             <div className="bg-white rounded-2xl shadow-xl flex items-center p-4 gap-4 border border-emerald-100 max-w-md">
                                 <Search className="text-slate-400 w-6 h-6" />
-                                <div className="flex-1 text-slate-400 font-serif text-lg">Search documents...</div>
+                                <div className="flex-1 text-slate-400 font-serif text-lg">{t('housing_association.documents.hero.search_placeholder')}</div>
                                 <div className="px-3 py-1 bg-slate-100 rounded text-xs font-bold text-slate-500">⌘K</div>
                             </div>
                         </motion.div>
@@ -109,7 +112,7 @@ export default function DocumentsPage() {
                         <FloatingElement x="10%" y="20%" rotate={5} delay={0.2} className="z-20">
                             <div className="p-4 bg-emerald-600 text-white rounded-2xl shadow-2xl flex items-center gap-3">
                                 <Shield className="w-6 h-6" />
-                                <div className="font-bold">Encrypted Storage</div>
+                                <div className="font-bold">{t('housing_association.documents.hero.encrypted')}</div>
                             </div>
                         </FloatingElement>
 
@@ -117,7 +120,7 @@ export default function DocumentsPage() {
                             <div className="p-6 bg-white rounded-[2rem] shadow-2xl border border-emerald-100 flex flex-col items-center">
                                 <PieChart className="w-12 h-12 text-teal-400 mb-2" />
                                 <div className="font-bold text-2xl text-[#111]">2.4 GB</div>
-                                <div className="text-xs uppercase tracking-widest text-slate-400">Archived Data</div>
+                                <div className="text-xs uppercase tracking-widest text-slate-400">{t('housing_association.documents.hero.archived_data')}</div>
                             </div>
                         </FloatingElement>
                     </div>
@@ -130,8 +133,8 @@ export default function DocumentsPage() {
                     <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Documents" />
                     <div className="absolute inset-0 bg-emerald-900/40 mix-blend-multiply" />
                     <div className="absolute bottom-10 right-10 text-white text-right max-w-lg">
-                        <h3 className="text-4xl font-serif mb-4">Paperless Future.</h3>
-                        <p className="text-xl opacity-90">Stop drowning in binders. Access any contract, protocol, or invoice in seconds.</p>
+                        <h3 className="text-4xl font-serif mb-4">{t('housing_association.documents.lifestyle.title')}</h3>
+                        <p className="text-xl opacity-90">{t('housing_association.documents.lifestyle.desc')}</p>
                     </div>
                 </div>
             </section>

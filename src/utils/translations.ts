@@ -447,7 +447,143 @@ export const translations = {
                         desc: "Easy booking flows for overnight guests."
                     }
                 }
-            }
+            },
+            communication: {
+                hero: {
+                    title_1: "Unified",
+                    title_2: "Voice.",
+                    description: "Speak once, reach everyone. A unified channel for announcements, updates, and urgent alerts.",
+                    email_digested: "Email Digested",
+                    mobile_push: "Mobile Push"
+                },
+                phone: {
+                    messages: "Messages",
+                    urgent: "Urgent",
+                    just_now: "Just now",
+                    elevator_title: "Elevator Maintenance",
+                    elevator_desc: "Elevator B will be down for service...",
+                    read_by: "Read by 45 Tenants",
+                    push_sent: "Push Sent",
+                    delivery_rate: "98% Delivery Rate"
+                },
+                features: {
+                    title: "Board to Resident Flow",
+                    description: "A dedicated channel for official, one-way communication from the board to the residents.",
+                    items: {
+                        board_announcements: { title: "Board Announcements", desc: "Board can post official news and updates in one central place.", benefit: "Residents know where to find reliable information" },
+                        targeted_messages: { title: "Targeted Messages", desc: "Send messages to all residents or selected buildings/sections.", benefit: "Avoids unnecessary messages" },
+                        email_notifications: { title: "Email Notifications", desc: "Automatic emails for new announcements.", benefit: "Ensures high visibility" },
+                        message_read: { title: "Message Read Status", desc: "Track whether residents have read important notices.", benefit: "Confirms information has been received" },
+                        push_notifications: { title: "Push Notifications", desc: "Alerts for urgent or time-sensitive updates.", benefit: "Faster communication when needed" },
+                        vendor_comm: { title: "Vendor Communication", desc: "Communicate with external vendors directly through the system.", benefit: "Keeps all communication documented in one place" }
+                    }
+                },
+                lifestyle: {
+                    title: "Community, Connected.",
+                    desc: "When everyone knows what’s happening, neighbors become friends.",
+                    stat_title: "100%",
+                    stat_subtitle: "Board Transparency",
+                    stat_desc: "Based on user surveys 2024."
+                }
+            },
+            issues: {
+                hero: {
+                    title_1: "Fix it",
+                    title_2: "Faster.",
+                    description: "From 'Broken Lock' to 'Fixed' in record time. Visual reporting that actually works."
+                },
+                map: {
+                    broken_lock: "Broken Lock",
+                    priority: "High Priority",
+                    resolved: "Resolved!",
+                    resolved_desc: "Janitor marked 'Entrance Light' as fixed."
+                },
+                features: {
+                    title: "Structured Reporting",
+                    description: "A dedicated system for managing facility-related problems and maintenance requests.",
+                    items: {
+                        submission: { title: "Issue Submission", desc: "Residents can report problems through the portal.", benefit: "Easy and quick reporting" },
+                        photo: { title: "Photo Upload", desc: "Attach photos to explain the issue.", benefit: "Reduces misunderstandings" },
+                        category: { title: "Issue Category", desc: "Select type (e.g. Plumbing, Electrical, Common Area).", benefit: "Faster handling" },
+                        priority: { title: "Priority Level", desc: "Mark urgency (High, Medium, Low).", benefit: "Helps board focus on critical issues" },
+                        tracking: { title: "Status Tracking", desc: "Clear progress: New → In Progress → Completed.", benefit: "Residents know what’s happening" },
+                        comments: { title: "Comments & Updates", desc: "Shared message thread for updates and responses.", benefit: "Transparent communication" }
+                    }
+                },
+                lifestyle: {
+                    title: "Empower your caretakers.",
+                    desc: "Give your vendors and janitors the digital tools they need to do their best work."
+                }
+            },
+            documents: {
+                hero: {
+                    title_1: "Digital",
+                    title_2: "Memory.",
+                    description: "The institutional brain of your association. Secure, searchable, and safe forever.",
+                    search_placeholder: "Search documents...",
+                    encrypted: "Encrypted Storage",
+                    archived_data: "Archived Data"
+                },
+                lifestyle: {
+                    title: "Paperless Future.",
+                    desc: "Stop drowning in binders. Access any contract, protocol, or invoice in seconds."
+                }
+            },
+            board: {
+                hero: {
+                    title_1: "Board",
+                    title_2: "Control.",
+                    description: "Meetings, decisions, and tasks in one fluid workspace. Stop using WhatsApp for official business.",
+                    task_manager: "Task Manager"
+                },
+                board_visual: {
+                    todo: "To-Do",
+                    protocol_signed: "Protocol Signed",
+                    admin_time: "Admin Time",
+                    open_tasks: "Open Tasks",
+                    completed: "Completed"
+                },
+                tasks: {
+                    budget: { t: "Budget 2026 Approval", s: "In Progress" },
+                    playground: { t: "Playground Renovation", s: "Pending" },
+                    fire_inspection: { t: "Fire Inspection", s: "Completed" }
+                },
+                lifestyle: {
+                    title: "Focus on decisions.",
+                    desc: "Let the software handle the reminders, signatures, and filing."
+                }
+            },
+            residents: {
+                hero: {
+                    title_1: "Your",
+                    title_2: "Home.",
+                    description: "Everything related to your apartment in one place. Fees, keys, cars, and community.",
+                    tags: {
+                        payment_history: "Payment History",
+                        car_registry: "Car Registry",
+                        documents: "Documents",
+                        polls: "Polls"
+                    }
+                },
+                dashboard: {
+                    monthly_fee: "Monthly Fee",
+                    due_in: "Due in 5 days",
+                    parking: "Parking",
+                    slot: "Slot A-42",
+                    active: "Active",
+                    poll: "Community Poll",
+                    poll_question: "Should we install solar panels on the south roof?",
+                    yes: "Yes",
+                    no: "No",
+                    auto_pay: "Auto-Pay",
+                    enabled: "Enabled",
+                    guests: "Guests"
+                },
+                lifestyle: {
+                    title: "You are in control.",
+                    desc: "Access your housing details anytime, anywhere. No more waiting for the office to open."
+                }
+            },
         }
     },
     ES: {
@@ -676,7 +812,7 @@ export const translations = {
             security_title: "Seguridad",
             security_text: "Este sitio cuenta con medidas de seguridad para proteger la pérdida, el mal uso y la alteración de la información bajo nuestro control. Almacenamos toda la información del usuario en bases de datos protegidas mediante una variedad de controles de acceso, además de estar ubicadas físicamente en una instalación segura. Se accede a estos datos solo para los fines especificados en esta política de privacidad.",
             opt_out_title: "Elección/Exclusión",
-            opt_out_text: "Puede optar por no recibir futuras comunicaciones de nuestra parte. También puede solicitar ver cualquier información sobre usted que hayamos almacenado, y puede solicitar que eliminemos cualquiera de esta información. Consulte a continuación cómo contactarnos.",
+            opt_out_text: "Puede optar por no recibir futuros comunicaciones de nuestra parte. También puede solicitar ver cualquier información sobre usted que hayamos almacenado, y puede solicitar que eliminemos cualquiera de esta información. Consulte a continuación cómo contactarnos.",
             usage_title: "Descargos de Responsabilidad del Uso del Sitio Web",
             usage_text: "Nuestra empresa es responsable del contenido de este sitio web. Este sitio web está diseñado solo para fines de información general y no constituye asesoramiento legal o médico ni la formación de una relación abogado-cliente o médico-paciente.",
             contact_title: "Cómo Contactarnos",
@@ -765,7 +901,7 @@ export const translations = {
                 sicci: { title: "Sicci", category: "Cámara de Comercio", desc: "Cámara de Comercio e Industria India de Singapur, apoyando el crecimiento empresarial." },
                 icai: { title: "I C A I", category: "Organización Profesional", desc: "Capítulo de Singapur del Instituto de Contadores Públicos de la India." },
                 chets: { title: "Chet's Shoes", category: "E-Commerce y Venta Minorista", desc: "Empresa familiar de calzado que ofrece botas de trabajo premium y zapatos de seguridad." },
-                finance: { title: "Finanzas Personales Suecia", category: "Educación Financiera", desc: "Empoderando a expatriados y NRI en Suecia con conocimientos sobre inversiones e impuestos." }
+                finance: { title: "Finanzas Personales Suecia", category: "Financial Education", desc: "Empoderando a expatriados y NRI en Suecia con conocimientos sobre inversiones e impuestos." }
             }
         },
         careers_page: {
@@ -820,8 +956,8 @@ export const translations = {
             },
             core_objective: {
                 title: "La Plataforma de Asociación de Vivienda",
-                description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan demasiado tiempo en correos, seguimientos, hojas de cálculo y coordinación manual.",
-                quote: "El objetivo es permitir que los miembros de la junta pasen menos tiempo en administración y más tiempo en lo que realmente importa, mejorando la experiencia de vida de los residentes.",
+                description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan far too much time on emails, follow-ups, spreadsheets, and manual coordination.",
+                quote: "El objetivo es permitir que los miembros de la junta pasen menos tiempo en administración y más tiempo en lo que realmente importa, improving the living experience for residents.",
                 features: {
                     chaos: "La plataforma reemplaza el caos con un espacio de trabajo digital simple que:",
                     list: [
@@ -888,15 +1024,151 @@ export const translations = {
                 },
                 lifestyle: {
                     shared_spaces: {
-                        title: "Espacios Compartidos.",
-                        desc: "Maximice la utilización de recursos comunes sin dolores de cabeza."
+                        title: "Espacios Comunes.",
+                        desc: "Maximiza la utilización de recursos comunes sin dolores de cabeza."
                     },
                     guest_apartments: {
                         title: "Apartamentos de Invitados.",
                         desc: "Flujos de reserva fáciles para huéspedes nocturnos."
                     }
                 }
-            }
+            },
+            communication: {
+                hero: {
+                    title_1: "Voz",
+                    title_2: "Unificada.",
+                    description: "Habla una vez, llega a todos. Un canal unificado para anuncios, actualizaciones y alertas urgentes.",
+                    email_digested: "Resumen por Email",
+                    mobile_push: "Notificación Móvil"
+                },
+                phone: {
+                    messages: "Mensajes",
+                    urgent: "Urgente",
+                    just_now: "Ahora mismo",
+                    elevator_title: "Mantenimiento Ascensor",
+                    elevator_desc: "El ascensor B estará fuera de servicio...",
+                    read_by: "Leído por 45 Inquilinos",
+                    push_sent: "Notificación Enviada",
+                    delivery_rate: "98% Tasa de Entrega"
+                },
+                features: {
+                    title: "Flujo Junta a Residente",
+                    description: "Un canal dedicado para comunicación oficial unidireccional de la junta a los residentes.",
+                    items: {
+                        board_announcements: { title: "Anuncios de la Junta", desc: "La junta puede publicar noticias oficiales y actualizaciones en un lugar central.", benefit: "Los residentes saben dónde encontrar información fiable" },
+                        targeted_messages: { title: "Mensajes Dirigidos", desc: "Envía mensajes a todos los residentes o edificios/secciones seleccionados.", benefit: "Evita mensajes innecesarios" },
+                        email_notifications: { title: "Notificaciones por Email", desc: "Emails automáticos para nuevos anuncios.", benefit: "Asegura alta visibilidad" },
+                        message_read: { title: "Estado de Lectura", desc: "Rastrea si los residentes han leído avisos importantes.", benefit: "Confirma que la información ha sido recibida" },
+                        push_notifications: { title: "Notificaciones Push", desc: "Alertas para actualizaciones urgentes o sensibles al tiempo.", benefit: "Comunicación más rápida cuando es necesaria" },
+                        vendor_comm: { title: "Comunicación con Proveedores", desc: "Comunícate con proveedores externos directamente a través del sistema.", benefit: "Mantiene toda la comunicación documentada en un solo lugar" }
+                    }
+                },
+                lifestyle: {
+                    title: "Comunidad, Conectada.",
+                    desc: "Cuando todos saben lo que pasa, los vecinos se convierten en amigos.",
+                    stat_title: "100%",
+                    stat_subtitle: "Transparencia de la Junta",
+                    stat_desc: "Basado en encuestas a usuarios 2024."
+                }
+            },
+            issues: {
+                hero: {
+                    title_1: "Arréglalo",
+                    title_2: "Rápido.",
+                    description: "De 'Cerradura Rota' a 'Arreglado' en tiempo récord. Reportes visuales que realmente funcionan."
+                },
+                map: {
+                    broken_lock: "Cerradura Rota",
+                    priority: "Alta Prioridad",
+                    resolved: "¡Resuelto!",
+                    resolved_desc: "El conserje marcó 'Luz de Entrada' como arreglada."
+                },
+                features: {
+                    title: "Reportes Estructurados",
+                    description: "Un sistema dedicado para gestionar problemas de instalaciones y solicitudes de mantenimiento.",
+                    items: {
+                        submission: { title: "Envío de Problemas", desc: "Los residentes pueden reportar problemas a través del portal.", benefit: "Reporte fácil y rápido" },
+                        photo: { title: "Subida de Fotos", desc: "Adjunta fotos para explicar el problema.", benefit: "Reduce malentendidos" },
+                        category: { title: "Categoría de Problema", desc: "Selecciona tipo (ej. Fontanería, Electricidad, Áreas Comunes).", benefit: "Manejo más rápido" },
+                        priority: { title: "Nivel de Prioridad", desc: "Marca urgencia (Alta, Media, Baja).", benefit: "Ayuda a la junta a enfocarse en problemas críticos" },
+                        tracking: { title: "Rastreo de Estado", desc: "Progreso claro: Nuevo → En Progreso → Completado.", benefit: "Los residentes saben lo que está pasando" },
+                        comments: { title: "Comentarios y Actualizaciones", desc: "Hilo de mensajes compartido para actualizaciones y respuestas.", benefit: "Comunicación transparente" }
+                    }
+                },
+                lifestyle: {
+                    title: "Empodera a tus cuidadores.",
+                    desc: "Dales a tus proveedores y conserjes las herramientas digitales que necesitan para hacer su mejor trabajo."
+                }
+            },
+            documents: {
+                hero: {
+                    title_1: "Memoria",
+                    title_2: "Digital.",
+                    description: "El cerebro institucional de tu asociación. Seguro, buscable y a salvo para siempre.",
+                    search_placeholder: "Buscar documentos...",
+                    encrypted: "Almacenamiento Encriptado",
+                    archived_data: "Datos Archivados"
+                },
+                lifestyle: {
+                    title: "Futuro Sin Papel.",
+                    desc: "Deja de ahogarte en archivadores. Accede a cualquier contrato, protocolo o factura en segundos."
+                }
+            },
+            board: {
+                hero: {
+                    title_1: "Control",
+                    title_2: "Junta.",
+                    description: "Reuniones, decisiones y tareas en un espacio de trabajo fluido. Deja de usar WhatsApp para asuntos oficiales.",
+                    task_manager: "Gestor de Tareas"
+                },
+                board_visual: {
+                    todo: "Pendientes",
+                    protocol_signed: "Protocolo Firmado",
+                    admin_time: "Tiempo Admin",
+                    open_tasks: "Tareas Abiertas",
+                    completed: "Completadas"
+                },
+                tasks: {
+                    budget: { t: "Aprobación Presupuesto 2026", s: "En Progreso" },
+                    playground: { t: "Renovación Parque Infantil", s: "Pendiente" },
+                    fire_inspection: { t: "Inspección de Incendios", s: "Completada" }
+                },
+                lifestyle: {
+                    title: "Enfócate en decisiones.",
+                    desc: "Deja que el software maneje los recordatorios, firmas y archivos."
+                }
+            },
+            residents: {
+                hero: {
+                    title_1: "Tu",
+                    title_2: "Hogar.",
+                    description: "Todo lo relacionado con tu apartamento en un solo lugar. Cuotas, llaves, coches y comunidad.",
+                    tags: {
+                        payment_history: "Historial de Pagos",
+                        car_registry: "Registro de Coches",
+                        documents: "Documentos",
+                        polls: "Encuestas"
+                    }
+                },
+                dashboard: {
+                    monthly_fee: "Cuota Mensual",
+                    due_in: "Vence en 5 días",
+                    parking: "Estacionamiento",
+                    slot: "Plaza A-42",
+                    active: "Activo",
+                    poll: "Encuesta Comunitaria",
+                    poll_question: "¿Deberíamos instalar paneles solares en el techo sur?",
+                    yes: "Sí",
+                    no: "No",
+                    auto_pay: "Pago Automático",
+                    enabled: "Habilitado",
+                    guests: "Invitados"
+                },
+                lifestyle: {
+                    title: "Tú tienes el control.",
+                    desc: "Accede a los detalles de tu vivienda en cualquier momento y lugar. No más esperas a que abra la oficina."
+                }
+            },
         }
     },
     SV: {
@@ -1345,7 +1617,143 @@ export const translations = {
                         desc: "Enkla bokningsflöden för övernattande gäster."
                     }
                 }
-            }
+            },
+            communication: {
+                hero: {
+                    title_1: "Enad",
+                    title_2: "Röst.",
+                    description: "Tala en gång, nå alla. En enad kanal för meddelanden, uppdateringar och brådskande varningar.",
+                    email_digested: "E-post Sammanfattning",
+                    mobile_push: "Mobilnotis"
+                },
+                phone: {
+                    messages: "Meddelanden",
+                    urgent: "Brådskande",
+                    just_now: "Just nu",
+                    elevator_title: "Hissunderhåll",
+                    elevator_desc: "Hiss B kommer att vara ur drift för service...",
+                    read_by: "Läst av 45 Boende",
+                    push_sent: "Notis Skickad",
+                    delivery_rate: "98% Leveransgrad"
+                },
+                features: {
+                    title: "Styrelse till Boende Flöde",
+                    description: "En dedikerad kanal för officiell, enkelriktad kommunikation från styrelsen till de boende.",
+                    items: {
+                        board_announcements: { title: "Styrelsemeddelanden", desc: "Styrelsen kan publicera officiella nyheter och uppdateringar på en central plats.", benefit: "Boende vet var de hittar pålitlig information" },
+                        targeted_messages: { title: "Riktade Meddelanden", desc: "Skicka meddelanden till alla boende eller utvalda byggnader/sektioner.", benefit: "Undviker onödiga meddelanden" },
+                        email_notifications: { title: "E-postnotiser", desc: "Automatiska e-postmeddelanden för nya meddelanden.", benefit: "Säkerställer hög synlighet" },
+                        message_read: { title: "Lässtatus", desc: "Spåra om boende har läst viktiga meddelanden.", benefit: "Bekräftar att informationen har mottagits" },
+                        push_notifications: { title: "Push-notiser", desc: "Varningar för brådskande eller tidskänsliga uppdateringar.", benefit: "Snabbare kommunikation när det behövs" },
+                        vendor_comm: { title: "Leverantörskommunikation", desc: "Kommunicera med externa leverantörer direkt genom systemet.", benefit: "Håller all kommunikation dokumenterad på en plats" }
+                    }
+                },
+                lifestyle: {
+                    title: "Gemenskap, Ansluten.",
+                    desc: "När alla vet vad som händer blir grannar vänner.",
+                    stat_title: "100%",
+                    stat_subtitle: "Styrelsetransparens",
+                    stat_desc: "Baserat på användarundersökningar 2024."
+                }
+            },
+            issues: {
+                hero: {
+                    title_1: "Fixa det",
+                    title_2: "Snabbare.",
+                    description: "Från 'Trasigt Lås' till 'Fixat' på rekordtid. Visuell rapportering som faktiskt fungerar."
+                },
+                map: {
+                    broken_lock: "Trasigt Lås",
+                    priority: "Hög Prioritet",
+                    resolved: "Löst!",
+                    resolved_desc: "Vaktmästaren markerade 'Entrébelysning' som åtgärdad."
+                },
+                features: {
+                    title: "Strukturerad Rapportering",
+                    description: "Ett dedikerat system för att hantera fastighetsrelaterade problem och underhållsförfrågningar.",
+                    items: {
+                        submission: { title: "Felanmälan", desc: "Boende kan rapportera problem via portalen.", benefit: "Enkel och snabb rapportering" },
+                        photo: { title: "Ladda upp Foton", desc: "Bifoga bilder för att förklara problemet.", benefit: "Minskar missförstånd" },
+                        category: { title: "Problemkategori", desc: "Välj typ (t.ex. VVS, El, Allmänna utrymmen).", benefit: "Snabbare hantering" },
+                        priority: { title: "Prioritetsnivå", desc: "Markera brådska (Hög, Medel, Låg).", benefit: "Hjälper styrelsen fokusera på kritiska problem" },
+                        tracking: { title: "Statusspårning", desc: "Tydlig framsteg: Ny → Pågående → Slutförd.", benefit: "Boende vet vad som händer" },
+                        comments: { title: "Kommentarer & Uppdateringar", desc: "Gemensam meddelandetråd för uppdateringar och svar.", benefit: "Transparent kommunikation" }
+                    }
+                },
+                lifestyle: {
+                    title: "Stärk era förvaltare.",
+                    desc: "Ge era leverantörer och vaktmästare de digitala verktyg de behöver för att göra sitt bästa jobb."
+                }
+            },
+            documents: {
+                hero: {
+                    title_1: "Digitalt",
+                    title_2: "Minne.",
+                    description: "Föreningens institutionella hjärna. Säkert, sökbart och tryggt för alltid.",
+                    search_placeholder: "Sök dokument...",
+                    encrypted: "Krypterad Lagring",
+                    archived_data: "Arkiverad Data"
+                },
+                lifestyle: {
+                    title: "Papperslös Framtid.",
+                    desc: "Sluta drunkna i pärmar. Få tillgång till valfritt kontrakt, protokoll eller faktura på sekunder."
+                }
+            },
+            board: {
+                hero: {
+                    title_1: "Styrelse",
+                    title_2: "Kontroll.",
+                    description: "Möten, beslut och uppgifter i ett flytande arbetsutrymme. Sluta använda WhatsApp för officiella ärenden.",
+                    task_manager: "Uppgiftshanterare"
+                },
+                board_visual: {
+                    todo: "Att Göra",
+                    protocol_signed: "Protokoll Signerat",
+                    admin_time: "Admin Tid",
+                    open_tasks: "Öppna Uppgifter",
+                    completed: "Slutförda"
+                },
+                tasks: {
+                    budget: { t: "Budget 2026 Godkännande", s: "Pågående" },
+                    playground: { t: "Lekplatsrenovering", s: "Väntande" },
+                    fire_inspection: { t: "Brandinspektion", s: "Slutförd" }
+                },
+                lifestyle: {
+                    title: "Fokusera på beslut.",
+                    desc: "Låt programvaran hantera påminnelser, signaturer och arkivering."
+                }
+            },
+            residents: {
+                hero: {
+                    title_1: "Ditt",
+                    title_2: "Hem.",
+                    description: "Allt relaterat till din lägenhet på ett ställe. Avgifter, nycklar, bilar och gemenskap.",
+                    tags: {
+                        payment_history: "Betalningshistorik",
+                        car_registry: "Bilregister",
+                        documents: "Dokument",
+                        polls: "Omröstningar"
+                    }
+                },
+                dashboard: {
+                    monthly_fee: "Månadsavgift",
+                    due_in: "Förfaller om 5 dagar",
+                    parking: "Parkering",
+                    slot: "Plats A-42",
+                    active: "Aktiv",
+                    poll: "Gemenskapspoll",
+                    poll_question: "Ska vi installera solpaneler på södra taket?",
+                    yes: "Ja",
+                    no: "Nej",
+                    auto_pay: "Autogiro",
+                    enabled: "Aktiverat",
+                    guests: "Gäster"
+                },
+                lifestyle: {
+                    title: "Du har kontrollen.",
+                    desc: "Få tillgång till dina bostadsuppgifter när som helst, var som helst. Inget mer väntande på att kontoret ska öppna."
+                }
+            },
         }
     },
     DA: {
@@ -1563,7 +1971,7 @@ export const translations = {
             list_3: "Vores side bruger en bestillingsformular, så forbrugerne kan anmode om information om vores produkter og tjenester. Vi indsamler forbrugerens kontaktoplysninger (som deres e-mailadresse, telefonnummer eller postadresse). Vi bruger kontaktoplysninger fra formularen til at sende ordrer, information eller tilbud.",
             list_4: "Forbrugerens kontaktoplysninger kan også bruges til at komme i kontakt med forbrugeren, når det er nødvendigt for at løse et problem.",
             list_5: "Når du udfylder en kontaktformular eller på anden måde kontakter os, kan vi gemme din kommunikation for at behandle dine forespørgsler, besvare dine anmodninger og forbedre vores tjenester.",
-            list_6: "I nogle tilfælde kan information, du giver via tredjepartstjänster såsom gratisnumre til denne side eller live chat-tjenester, blive gemt for at behandle dine forespørgsler, besvare dine anmodninger og forbedre vores tjenester. Information indsamlet af disse tredjepartstjenester er også underlagt deres privatlivspolitik.",
+            list_6: "I nogle tilfælde kan information, du giver via tredjepartstjenester såsom gratisnumre til denne side eller live chat-tjenester, blive gemt for at behandle dine forespørgsler, besvare dine anmodninger og forbedre vores tjenester. Information indsamlet af disse tredjepartstjenester er også underlagt deres privatlivspolitik.",
             list_7: "Vi kan bruge din e-mailadresse, telefonnummer eller postadresse til at kommunikere med dig om vores tjenester.",
             list_8: "Vi kan bruge enhver information, du giver, eller som vi indsamler, til at levere, vedligeholde, beskytte og forbedre vores tjenester (herunder reklametjenester) og udvikle nye tjenester.",
             list_9: "Forbrugere kan til enhver tid fravælge at modtage fremtidige mails; se afsnittet om valg/fravalg nedenfor.",
@@ -1794,7 +2202,143 @@ export const translations = {
                         desc: "Nemme bookingflows for overnattende gæster."
                     }
                 }
-            }
+            },
+            communication: {
+                hero: {
+                    title_1: "Forenede",
+                    title_2: "Stemme.",
+                    description: "Tal én gang, nå alle. En samlet kanal til meddelelser, opdateringer og presserende advarsler.",
+                    email_digested: "E-mail Resume",
+                    mobile_push: "Mobil Push"
+                },
+                phone: {
+                    messages: "Beskeder",
+                    urgent: "Haster",
+                    just_now: "Lige nu",
+                    elevator_title: "Elevator Vedligeholdelse",
+                    elevator_desc: "Elevator B vil være ude af drift for service...",
+                    read_by: "Læst af 45 Beboere",
+                    push_sent: "Push Sendt",
+                    delivery_rate: "98% Leveringsrate"
+                },
+                features: {
+                    title: "Bestyrelse til Beboer Flow",
+                    description: "En dedikeret kanal til officiel, envejskommunikation fra bestyrelsen til beboerne.",
+                    items: {
+                        board_announcements: { title: "Bestyrelsesmeddelelser", desc: "Bestyrelsen kan offentliggøre officielle nyheder og opdateringer ét centralt sted.", benefit: "Beboere ved, hvor de finder pålidelig information" },
+                        targeted_messages: { title: "Målrettede Beskeder", desc: "Send beskeder til alle beboere eller udvalgte bygninger/sektioner.", benefit: "Undgår unødvendige beskeder" },
+                        email_notifications: { title: "E-mail Notifikationer", desc: "Automatiske e-mails for nye meddelelser.", benefit: "Sikrer høj synlighed" },
+                        message_read: { title: "Læsestatus", desc: "Spor om beboere har læst vigtige meddelelser.", benefit: "Bekræfter at informationen er modtaget" },
+                        push_notifications: { title: "Push Notifikationer", desc: "Advarsler for hastende eller tidssensitive opdateringer.", benefit: "Hurtigere kommunikation når det er nødvendigt" },
+                        vendor_comm: { title: "Leverandørkommunikation", desc: "Kommuniker med eksterne leverandører direkte gennem systemet.", benefit: "Holder al kommunikation dokumenteret ét sted" }
+                    }
+                },
+                lifestyle: {
+                    title: "Fællesskab, Forbundet.",
+                    desc: "Når alle ved hvad der sker, bliver naboer til venner.",
+                    stat_title: "100%",
+                    stat_subtitle: "Bestyrelsesgennemsigtighed",
+                    stat_desc: "Baseret på brugerundersøgelser 2024."
+                }
+            },
+            issues: {
+                hero: {
+                    title_1: "Fix det",
+                    title_2: "Hurtigere.",
+                    description: "Fra 'Ødelagt Lås' til 'Fixet' på rekordtid. Visuel rapportering der faktisk virker."
+                },
+                map: {
+                    broken_lock: "Ødelagt Lås",
+                    priority: "Høj Prioritet",
+                    resolved: "Løst!",
+                    resolved_desc: "Viceværten markerede 'Indgangslys' som fixet."
+                },
+                features: {
+                    title: "Struktureret Rapportering",
+                    description: "Et dedikeret system til håndtering af facilitetsrelaterede problemer og vedligeholdelsesanmodninger.",
+                    items: {
+                        submission: { title: "Indsendelse af Problemer", desc: "Beboere kan rapportere problemer gennem portalen.", benefit: "Nem og hurtig rapportering" },
+                        photo: { title: "Foto Upload", desc: "Vedhæft billeder for at forklare problemet.", benefit: "Reducerer misforståelser" },
+                        category: { title: "Problemkategori", desc: "Vælg type (fx VVS, El, Fællesområde).", benefit: "Hurtigere håndtering" },
+                        priority: { title: "Prioritetsniveau", desc: "Marker hast (Høj, Mellem, Lav).", benefit: "Hjælper bestyrelsen med at fokusere på kritiske problemer" },
+                        tracking: { title: "Status Sporing", desc: "Tydelig fremgang: Ny → I Gang → Afsluttet.", benefit: "Beboere ved hvad der sker" },
+                        comments: { title: "Kommentarer & Opdateringer", desc: "Fælles beskedtråd for opdateringer og svar.", benefit: "Gennemsigtig kommunikation" }
+                    }
+                },
+                lifestyle: {
+                    title: "Styrk jeres viceværter.",
+                    desc: "Giv jeres leverandører og viceværter de digitale værktøjer de behøver for at gøre deres bedste arbejde."
+                }
+            },
+            documents: {
+                hero: {
+                    title_1: "Digital",
+                    title_2: "Hukommelse.",
+                    description: "Foreningens institutionelle hjerne. Sikker, søgbar og tryg for altid.",
+                    search_placeholder: "Søg dokumenter...",
+                    encrypted: "Krypteret Lagring",
+                    archived_data: "Arkiveret Data"
+                },
+                lifestyle: {
+                    title: "Papirløs Fremtid.",
+                    desc: "Stop med at drukne i mapper. Få adgang til enhver kontrakt, protokol eller faktura på sekunder."
+                }
+            },
+            board: {
+                hero: {
+                    title_1: "Bestyrelses",
+                    title_2: "Kontrol.",
+                    description: "Møder, beslutninger og opgaver i ét flydende arbejdsrum. Stop med at bruge WhatsApp til officielle anliggender.",
+                    task_manager: "Opgavestyring"
+                },
+                board_visual: {
+                    todo: "At Gøre",
+                    protocol_signed: "Protokol Underskrevet",
+                    admin_time: "Admin Tid",
+                    open_tasks: "Åbne Opgaver",
+                    completed: "Afsluttet"
+                },
+                tasks: {
+                    budget: { t: "Budget 2026 Godkendelse", s: "I Gang" },
+                    playground: { t: "Legepladsrenovering", s: "Afventer" },
+                    fire_inspection: { t: "Brandinspektion", s: "Afsluttet" }
+                },
+                lifestyle: {
+                    title: "Fokus på beslutninger.",
+                    desc: "Lad softwaren håndtere påmindelser, underskrifter og arkivering."
+                }
+            },
+            residents: {
+                hero: {
+                    title_1: "Dit",
+                    title_2: "Hjem.",
+                    description: "Alt relateret til din lejlighed på ét sted. Afgifter, nøgler, biler og fællesskab.",
+                    tags: {
+                        payment_history: "Betalingshistorik",
+                        car_registry: "Bilregister",
+                        documents: "Dokumenter",
+                        polls: "Afstemninger"
+                    }
+                },
+                dashboard: {
+                    monthly_fee: "Månedlig Ydelse",
+                    due_in: "Forfalder om 5 dage",
+                    parking: "Parkering",
+                    slot: "Plads A-42",
+                    active: "Aktiv",
+                    poll: "Fællesskabsafstemning",
+                    poll_question: "Skal vi installere solceller på sydtaget?",
+                    yes: "Ja",
+                    no: "Nej",
+                    auto_pay: "Betalingsservice",
+                    enabled: "Aktiveret",
+                    guests: "Gæster"
+                },
+                lifestyle: {
+                    title: "Du har kontrollen.",
+                    desc: "Få adgang til dine boligoplysninger når som helst, hvor som helst. Ikke mere venten på at kontoret åbner."
+                }
+            },
         }
     }
 };

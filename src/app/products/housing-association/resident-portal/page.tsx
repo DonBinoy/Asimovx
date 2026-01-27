@@ -12,6 +12,7 @@ import {
     CreditCard,
     Vote
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -34,6 +35,8 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 }
 
 export default function ResidentPage() {
+    const { t } = useLanguage();
+
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-cyan-100 selection:text-cyan-900 overflow-x-hidden">
 
@@ -65,14 +68,19 @@ export default function ResidentPage() {
                                 <User className="w-10 h-10" />
                             </div>
                             <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-none mb-10 text-[#111]">
-                                Your <br /> <span className="italic text-cyan-600">Home.</span>
+                                {t('housing_association.residents.hero.title_1')} <br /> <span className="italic text-cyan-600">{t('housing_association.residents.hero.title_2')}</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-2xl mb-12">
-                                Everything related to your apartment in one place. <br /> Fees, keys, cars, and community.
+                                {t('housing_association.residents.hero.description')}
                             </p>
 
                             <div className="flex gap-4 flex-wrap">
-                                {["Payment History", "Car Registry", "Documents", "Polls"].map((tag, i) => (
+                                {[
+                                    t('housing_association.residents.hero.tags.payment_history'),
+                                    t('housing_association.residents.hero.tags.car_registry'),
+                                    t('housing_association.residents.hero.tags.documents'),
+                                    t('housing_association.residents.hero.tags.polls')
+                                ].map((tag, i) => (
                                     <div key={i} className="px-4 py-2 bg-white rounded-xl border border-slate-100 shadow-sm text-sm font-bold text-slate-600">
                                         {tag}
                                     </div>
@@ -102,28 +110,28 @@ export default function ResidentPage() {
                                 <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
                                     <Wallet className="w-8 h-8 text-cyan-500" />
                                     <div className="flex-1">
-                                        <div className="font-bold text-lg text-[#111]">Monthly Fee</div>
-                                        <div className="text-xs text-slate-400">Due in 5 days</div>
+                                        <div className="font-bold text-lg text-[#111]">{t('housing_association.residents.dashboard.monthly_fee')}</div>
+                                        <div className="text-xs text-slate-400">{t('housing_association.residents.dashboard.due_in')}</div>
                                     </div>
                                     <div className="font-bold text-xl text-[#111]">$4,200</div>
                                 </div>
                                 <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
                                     <Car className="w-8 h-8 text-sky-500" />
                                     <div className="flex-1">
-                                        <div className="font-bold text-lg text-[#111]">Parking</div>
-                                        <div className="text-xs text-slate-400">Slot A-42</div>
+                                        <div className="font-bold text-lg text-[#111]">{t('housing_association.residents.dashboard.parking')}</div>
+                                        <div className="text-xs text-slate-400">{t('housing_association.residents.dashboard.slot')}</div>
                                     </div>
-                                    <div className="font-bold text-xl text-green-500">Active</div>
+                                    <div className="font-bold text-xl text-green-500">{t('housing_association.residents.dashboard.active')}</div>
                                 </div>
                                 <div className="p-6 bg-gradient-to-r from-cyan-500 to-sky-600 rounded-2xl shadow-lg shadow-cyan-500/20 text-white mt-4">
                                     <div className="flex items-center gap-3 mb-4">
                                         <Vote className="w-6 h-6" />
-                                        <span className="font-bold">Community Poll</span>
+                                        <span className="font-bold">{t('housing_association.residents.dashboard.poll')}</span>
                                     </div>
-                                    <p className="mb-4 text-sm opacity-90">Should we install solar panels on the south roof?</p>
+                                    <p className="mb-4 text-sm opacity-90">{t('housing_association.residents.dashboard.poll_question')}</p>
                                     <div className="flex gap-2">
-                                        <div className="flex-1 py-2 bg-white/20 rounded-lg text-center font-bold text-sm cursor-pointer hover:bg-white/30">Yes</div>
-                                        <div className="flex-1 py-2 bg-white/20 rounded-lg text-center font-bold text-sm cursor-pointer hover:bg-white/30">No</div>
+                                        <div className="flex-1 py-2 bg-white/20 rounded-lg text-center font-bold text-sm cursor-pointer hover:bg-white/30">{t('housing_association.residents.dashboard.yes')}</div>
+                                        <div className="flex-1 py-2 bg-white/20 rounded-lg text-center font-bold text-sm cursor-pointer hover:bg-white/30">{t('housing_association.residents.dashboard.no')}</div>
                                     </div>
                                 </div>
                             </div>
@@ -134,8 +142,8 @@ export default function ResidentPage() {
                             <div className="p-4 bg-[#111] text-white rounded-2xl shadow-2xl flex items-center gap-4">
                                 <CreditCard className="w-8 h-8 text-cyan-400" />
                                 <div>
-                                    <div className="font-bold">Auto-Pay</div>
-                                    <div className="text-xs text-slate-400">Enabled</div>
+                                    <div className="font-bold">{t('housing_association.residents.dashboard.auto_pay')}</div>
+                                    <div className="text-xs text-slate-400">{t('housing_association.residents.dashboard.enabled')}</div>
                                 </div>
                             </div>
                         </FloatingElement>
@@ -143,7 +151,7 @@ export default function ResidentPage() {
                         <FloatingElement x="80%" y="60%" rotate={-5} delay={0.4} className="z-20">
                             <div className="w-40 h-40 bg-white rounded-full shadow-2xl flex flex-col items-center justify-center border border-slate-100">
                                 <div className="text-4xl font-serif font-bold text-cyan-500">2</div>
-                                <div className="text-xs uppercase font-bold text-slate-400">Guests</div>
+                                <div className="text-xs uppercase font-bold text-slate-400">{t('housing_association.residents.dashboard.guests')}</div>
                             </div>
                         </FloatingElement>
                     </div>
@@ -156,8 +164,8 @@ export default function ResidentPage() {
                     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Community" />
                     <div className="absolute inset-0 bg-sky-900/30 mix-blend-multiply" />
                     <div className="absolute bottom-10 center text-white text-center w-full">
-                        <h3 className="text-4xl font-serif mb-4">You are in control.</h3>
-                        <p className="text-xl opacity-90 max-w-2xl mx-auto">Access your housing details anytime, anywhere. No more waiting for the office to open.</p>
+                        <h3 className="text-4xl font-serif mb-4">{t('housing_association.residents.lifestyle.title')}</h3>
+                        <p className="text-xl opacity-90 max-w-2xl mx-auto">{t('housing_association.residents.lifestyle.desc')}</p>
                     </div>
                 </div>
             </section>

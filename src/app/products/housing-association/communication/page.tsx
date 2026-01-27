@@ -11,6 +11,7 @@ import {
     Bell,
     Users
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -33,6 +34,7 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 }
 
 export default function CommunicationPage() {
+    const { t } = useLanguage();
 
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
@@ -67,20 +69,20 @@ export default function CommunicationPage() {
                             </div>
 
                             <h1 className="text-5xl md:text-[8rem] font-serif font-medium tracking-tight leading-[0.9] mb-10 text-[#111]">
-                                Unified <br />
-                                <span className="italic text-blue-500">Voice.</span>
+                                {t('housing_association.communication.hero.title_1')} <br />
+                                <span className="italic text-blue-500">{t('housing_association.communication.hero.title_2')}</span>
                             </h1>
                             <p className="text-2xl text-slate-500 max-w-lg leading-relaxed mb-12 font-light">
-                                Speak once, reach everyone. A unified channel for announcements, updates, and urgent alerts.
+                                {t('housing_association.communication.hero.description')}
                             </p>
                             <div className="flex gap-4">
                                 <div className="px-6 py-4 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
                                     <Mail className="w-5 h-5 text-blue-500" />
-                                    <span className="font-bold text-slate-700">Email Digested</span>
+                                    <span className="font-bold text-slate-700">{t('housing_association.communication.hero.email_digested')}</span>
                                 </div>
                                 <div className="px-6 py-4 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
                                     <Smartphone className="w-5 h-5 text-blue-500" />
-                                    <span className="font-bold text-slate-700">Mobile Push</span>
+                                    <span className="font-bold text-slate-700">{t('housing_association.communication.hero.mobile_push')}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -98,18 +100,18 @@ export default function CommunicationPage() {
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-[#222] rounded-b-xl z-20" />
                             <div className="h-full w-full bg-white flex flex-col pt-12">
                                 <div className="px-6 pb-4 border-b border-slate-100 flex justify-between items-center bg-white z-10">
-                                    <span className="font-bold text-lg font-serif">Messages</span>
+                                    <span className="font-bold text-lg font-serif">{t('housing_association.communication.phone.messages')}</span>
                                     <div className="w-8 h-8 rounded-full bg-slate-100" />
                                 </div>
                                 <div className="p-4 space-y-4 bg-slate-50 h-full relative">
                                     <div className="absolute inset-0 bg-blue-50/50 pointer-events-none" />
                                     <div className="p-5 bg-white rounded-2xl shadow-lg border border-slate-100 relative z-10">
                                         <div className="flex justify-between mb-2">
-                                            <span className="text-xs font-bold text-blue-600 uppercase bg-blue-50 px-2 py-1 rounded">Urgent</span>
-                                            <span className="text-xs text-slate-400">Just now</span>
+                                            <span className="text-xs font-bold text-blue-600 uppercase bg-blue-50 px-2 py-1 rounded">{t('housing_association.communication.phone.urgent')}</span>
+                                            <span className="text-xs text-slate-400">{t('housing_association.communication.phone.just_now')}</span>
                                         </div>
-                                        <h4 className="font-bold text-slate-900">Elevator Maintenance</h4>
-                                        <p className="text-sm text-slate-500 mt-2">Elevator B will be down for service...</p>
+                                        <h4 className="font-bold text-slate-900">{t('housing_association.communication.phone.elevator_title')}</h4>
+                                        <p className="text-sm text-slate-500 mt-2">{t('housing_association.communication.phone.elevator_desc')}</p>
                                     </div>
                                     {[1, 2, 3].map((_, i) => (
                                         <div key={i} className="p-4 bg-white/60 rounded-2xl shadow-sm border border-slate-100 blur-[1px]">
@@ -128,7 +130,7 @@ export default function CommunicationPage() {
                                     <CheckCircle2 className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <div className="font-bold text-slate-900">Read by 45 Tenants</div>
+                                    <div className="font-bold text-slate-900">{t('housing_association.communication.phone.read_by')}</div>
                                     <div className="text-xs text-slate-500">2 mins ago</div>
                                 </div>
                             </div>
@@ -138,8 +140,8 @@ export default function CommunicationPage() {
                             <div className="p-4 bg-[#111] text-white rounded-2xl shadow-2xl flex items-center gap-4 max-w-xs">
                                 <Bell className="w-6 h-6 text-yellow-400" />
                                 <div>
-                                    <div className="font-bold">Push Sent</div>
-                                    <div className="text-xs text-slate-400">98% Delivery Rate</div>
+                                    <div className="font-bold">{t('housing_association.communication.phone.push_sent')}</div>
+                                    <div className="text-xs text-slate-400">{t('housing_association.communication.phone.delivery_rate')}</div>
                                 </div>
                             </div>
                         </FloatingElement>
@@ -151,43 +153,43 @@ export default function CommunicationPage() {
             < section className="py-24 bg-white relative z-20" >
                 <div className="max-w-[1400px] mx-auto px-6">
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-5xl font-serif text-[#111] mb-6">Board to Resident Flow</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif text-[#111] mb-6">{t('housing_association.communication.features.title')}</h2>
                         <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-                            A dedicated channel for official, one-way communication from the board to the residents.
+                            {t('housing_association.communication.features.description')}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Board Announcements",
-                                desc: "Board can post official news and updates in one central place.",
-                                benefit: "Residents know where to find reliable information"
+                                title: t('housing_association.communication.features.items.board_announcements.title'),
+                                desc: t('housing_association.communication.features.items.board_announcements.desc'),
+                                benefit: t('housing_association.communication.features.items.board_announcements.benefit')
                             },
                             {
-                                title: "Targeted Messages",
-                                desc: "Send messages to all residents or selected buildings/sections.",
-                                benefit: "Avoids unnecessary messages"
+                                title: t('housing_association.communication.features.items.targeted_messages.title'),
+                                desc: t('housing_association.communication.features.items.targeted_messages.desc'),
+                                benefit: t('housing_association.communication.features.items.targeted_messages.benefit')
                             },
                             {
-                                title: "Email Notifications",
-                                desc: "Automatic emails for new announcements.",
-                                benefit: "Ensures high visibility"
+                                title: t('housing_association.communication.features.items.email_notifications.title'),
+                                desc: t('housing_association.communication.features.items.email_notifications.desc'),
+                                benefit: t('housing_association.communication.features.items.email_notifications.benefit')
                             },
                             {
-                                title: "Message Read Status",
-                                desc: "Track whether residents have read important notices.",
-                                benefit: "Confirms information has been received"
+                                title: t('housing_association.communication.features.items.message_read.title'),
+                                desc: t('housing_association.communication.features.items.message_read.desc'),
+                                benefit: t('housing_association.communication.features.items.message_read.benefit')
                             },
                             {
-                                title: "Push Notifications",
-                                desc: "Alerts for urgent or time-sensitive updates.",
-                                benefit: "Faster communication when needed"
+                                title: t('housing_association.communication.features.items.push_notifications.title'),
+                                desc: t('housing_association.communication.features.items.push_notifications.desc'),
+                                benefit: t('housing_association.communication.features.items.push_notifications.benefit')
                             },
                             {
-                                title: "Vendor Communication",
-                                desc: "Communicate with external vendors directly through the system.",
-                                benefit: "Keeps all communication documented in one place"
+                                title: t('housing_association.communication.features.items.vendor_comm.title'),
+                                desc: t('housing_association.communication.features.items.vendor_comm.desc'),
+                                benefit: t('housing_association.communication.features.items.vendor_comm.benefit')
                             }
                         ].map((item, i) => (
                             <div key={i} className="bg-[#F9F8F6] p-8 rounded-[2rem] hover:shadow-lg transition-shadow border border-slate-100">
@@ -215,17 +217,17 @@ export default function CommunicationPage() {
                         <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="People talking" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <div className="absolute bottom-10 left-10 text-white">
-                            <h3 className="text-4xl font-serif mb-2">Community, Connected.</h3>
-                            <p className="opacity-80">When everyone knows what’s happening, neighbors become friends.</p>
+                            <h3 className="text-4xl font-serif mb-2">{t('housing_association.communication.lifestyle.title')}</h3>
+                            <p className="opacity-80">{t('housing_association.communication.lifestyle.desc')}</p>
                         </div>
                     </div>
                     <div className="md:col-span-4 h-full rounded-[3rem] bg-[#111] p-10 text-white flex flex-col justify-between shadow-2xl">
                         <Users className="w-12 h-12 text-blue-400" />
                         <div>
-                            <div className="text-6xl font-bold font-serif mb-2 text-white">100%</div>
-                            <div className="text-xl opacity-60">Board Transparency</div>
+                            <div className="text-6xl font-bold font-serif mb-2 text-white">{t('housing_association.communication.lifestyle.stat_title')}</div>
+                            <div className="text-xl opacity-60">{t('housing_association.communication.lifestyle.stat_subtitle')}</div>
                         </div>
-                        <p className="text-sm opacity-40">Based on user surveys 2024.</p>
+                        <p className="text-sm opacity-40">{t('housing_association.communication.lifestyle.stat_desc')}</p>
                     </div>
                 </div>
             </section >

@@ -10,6 +10,7 @@ import {
     CheckCircle2,
     TrendingDown
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -32,6 +33,8 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 }
 
 export default function BoardPage() {
+    const { t } = useLanguage();
+
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-rose-100 selection:text-rose-900 overflow-x-hidden">
 
@@ -63,16 +66,16 @@ export default function BoardPage() {
                                 <CheckSquare className="w-10 h-10" />
                             </div>
                             <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.85] mb-12 text-[#111]">
-                                Board <br /> <span className="italic text-rose-600">Control.</span>
+                                {t('housing_association.board.hero.title_1')} <br /> <span className="italic text-rose-600">{t('housing_association.board.hero.title_2')}</span>
                             </h1>
                             <p className="text-2xl text-slate-500 leading-relaxed font-light max-w-lg mb-12">
-                                Meetings, decisions, and tasks in one fluid workspace. <br /> <span className="text-slate-900 font-medium">Stop using WhatsApp for official business.</span>
+                                {t('housing_association.board.hero.description')}
                             </p>
 
                             <div className="grid grid-cols-2 gap-4 max-w-md">
                                 <div className="px-6 py-4 rounded-[2rem] bg-white border border-rose-100 shadow-xl flex gap-3 items-center hover:-translate-y-1 transition-transform cursor-default">
                                     <CheckSquare className="w-6 h-6 text-rose-500" />
-                                    <span className="font-bold text-lg">Task Manager</span>
+                                    <span className="font-bold text-lg">{t('housing_association.board.hero.task_manager')}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -88,7 +91,7 @@ export default function BoardPage() {
                             className="w-full max-w-lg bg-[#111] rounded-[3rem] p-8 md:p-12 shadow-[0_50px_100px_-20px_rgba(225,29,72,0.3)] text-white relative z-10 border border-white/10"
                         >
                             <div className="flex justify-between items-center mb-12">
-                                <h3 className="text-3xl font-serif font-medium">To-Do</h3>
+                                <h3 className="text-3xl font-serif font-medium">{t('housing_association.board.board_visual.todo')}</h3>
                                 <div className="flex -space-x-4">
                                     {[1, 2, 3, 4].map(i => <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1E1E24] bg-gradient-to-br from-slate-600 to-slate-800" />)}
                                 </div>
@@ -96,9 +99,9 @@ export default function BoardPage() {
 
                             <div className="space-y-4">
                                 {[
-                                    { t: "Budget 2026 Approval", d: "Due Oct 30", s: "In Progress", c: "bg-yellow-500" },
-                                    { t: "Playground Renovation", d: "Due Nov 01", s: "Pending", c: "bg-blue-500" },
-                                    { t: "Fire Inspection", d: "Done", s: "Completed", c: "bg-green-500" },
+                                    { t: t('housing_association.board.tasks.budget.t'), d: "Due Oct 30", s: t('housing_association.board.tasks.budget.s'), c: "bg-yellow-500" },
+                                    { t: t('housing_association.board.tasks.playground.t'), d: "Due Nov 01", s: t('housing_association.board.tasks.playground.s'), c: "bg-blue-500" },
+                                    { t: t('housing_association.board.tasks.fire_inspection.t'), d: "Done", s: t('housing_association.board.tasks.fire_inspection.s'), c: "bg-green-500" },
                                 ].map((task, i) => (
                                     <div key={i} className="flex items-center p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer group">
                                         <div className={`w-3 h-3 rounded-full ${task.c} mr-5 shadow-[0_0_15px_rgba(255,255,255,0.3)]`} />
@@ -113,11 +116,11 @@ export default function BoardPage() {
                             <div className="mt-8 pt-8 border-t border-white/5 grid grid-cols-2 gap-4">
                                 <div className="text-center p-4 bg-white/5 rounded-2xl">
                                     <div className="text-2xl font-bold">12</div>
-                                    <div className="text-[10px] uppercase opacity-50">Open Tasks</div>
+                                    <div className="text-[10px] uppercase opacity-50">{t('housing_association.board.board_visual.open_tasks')}</div>
                                 </div>
                                 <div className="text-center p-4 bg-white/5 rounded-2xl">
                                     <div className="text-2xl font-bold text-green-400">45</div>
-                                    <div className="text-[10px] uppercase opacity-50">Completed</div>
+                                    <div className="text-[10px] uppercase opacity-50">{t('housing_association.board.board_visual.completed')}</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -126,7 +129,7 @@ export default function BoardPage() {
                         <FloatingElement x="0%" y="30%" rotate={-10} delay={0.2} className="z-20">
                             <div className="p-5 bg-white rounded-[2rem] shadow-2xl border border-rose-100 w-56 flex flex-col items-center text-center">
                                 <Gavel className="w-10 h-10 text-rose-500 mb-2" />
-                                <div className="font-bold text-[#111]">Protocol Signed</div>
+                                <div className="font-bold text-[#111]">{t('housing_association.board.board_visual.protocol_signed')}</div>
                                 <div className="text-xs text-slate-400">By 5/5 Members</div>
                             </div>
                         </FloatingElement>
@@ -136,7 +139,7 @@ export default function BoardPage() {
                                 <TrendingDown className="w-8 h-8 text-green-500" />
                                 <div>
                                     <div className="font-bold text-lg text-[#111]">-15%</div>
-                                    <div className="text-xs text-slate-500">Admin Time</div>
+                                    <div className="text-xs text-slate-500">{t('housing_association.board.board_visual.admin_time')}</div>
                                 </div>
                             </div>
                         </FloatingElement>
@@ -151,8 +154,8 @@ export default function BoardPage() {
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Board Meeting" />
                     <div className="absolute inset-0 bg-rose-900/40 mix-blend-multiply" />
                     <div className="absolute bottom-10 left-10 text-white max-w-lg">
-                        <h3 className="text-4xl font-serif mb-4">Focus on decisions.</h3>
-                        <p className="text-xl opacity-90">Let the software handle the reminders, signatures, and filing.</p>
+                        <h3 className="text-4xl font-serif mb-4">{t('housing_association.board.lifestyle.title')}</h3>
+                        <p className="text-xl opacity-90">{t('housing_association.board.lifestyle.desc')}</p>
                     </div>
                 </div>
             </section>
