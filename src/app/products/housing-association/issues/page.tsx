@@ -9,9 +9,11 @@ import {
     CheckCircle,
     Clock,
     MapPin,
-    Wrench
+    Wrench,
+    ArrowRight
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEffect } from "react";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -35,6 +37,10 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 
 export default function IssuesPage() {
     const { t } = useLanguage();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-orange-100 selection:text-orange-900 overflow-x-hidden">
@@ -175,26 +181,28 @@ export default function IssuesPage() {
                                 icon: CheckCircle
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bg-[#F9F8F6] p-8 rounded-[2rem] hover:shadow-lg transition-shadow border border-slate-100">
-                                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 text-orange-500">
+                            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                                <div className="w-12 h-12 bg-orange-50/50 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300 text-orange-500 relative z-10">
                                     <item.icon className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-bold text-[#111] mb-3">{item.title}</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed min-h-[3rem]">
+                                <h3 className="text-xl font-bold text-[#111] mb-3 relative z-10">{item.title}</h3>
+                                <p className="text-slate-600 mb-6 leading-relaxed min-h-[3rem] relative z-10">
                                     {item.desc}
                                 </p>
-                                <div className="flex items-start gap-2 text-sm text-orange-600 font-medium bg-orange-50/50 p-3 rounded-xl">
-                                    <CheckCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                                <div className="flex items-center gap-2 text-sm text-slate-600 relative z-10">
+                                    <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-orange-500" />
                                     <span>{item.benefit}</span>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* LIFESTYLE BREAK */}
-            <section className="py-20 px-6">
+            < section className="py-20 px-6" >
                 <div className="max-w-[1400px] mx-auto h-[500px] rounded-[3rem] overflow-hidden relative group shadow-2xl">
                     <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Maintenance" />
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-transparent mix-blend-multiply" />
@@ -203,8 +211,8 @@ export default function IssuesPage() {
                         <p className="text-xl opacity-90 leading-relaxed">{t('housing_association.issues.lifestyle.desc')}</p>
                     </div>
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 }

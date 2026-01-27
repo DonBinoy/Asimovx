@@ -335,26 +335,32 @@ function LivingIndex() {
                         <Link
                             key={index}
                             href={item.href}
-                            className="group relative h-[280px] bg-white rounded-2xl p-8 flex flex-col justify-between overflow-hidden border border-slate-200 transition-all duration-300 hover:border-slate-900 hover:shadow-xl"
+                            className="group relative h-[360px] bg-[#111] rounded-[2rem] p-8 flex flex-col justify-between overflow-hidden border border-slate-800 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
                         >
-                            <div className="flex justify-between items-start">
-                                <span className="text-xs font-bold font-mono text-slate-400 group-hover:text-slate-900 transition-colors duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-slate-800/50 rounded-full blur-3xl group-hover:bg-slate-700/50 transition-colors duration-500" />
+
+                            <div className="flex justify-between items-start relative z-10">
+                                <span className="text-xs font-bold font-mono text-slate-500 group-hover:text-white transition-colors duration-300">
                                     0{index + 1}
                                 </span>
-                                <div className="w-10 h-10 rounded-lg border border-slate-100 bg-slate-50 flex items-center justify-center group-hover:bg-[#111] group-hover:border-[#111] transition-all duration-300">
-                                    <item.icon className="w-5 h-5 text-slate-700 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                                <div className="w-12 h-12 rounded-2xl border border-slate-800 bg-slate-900/50 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300 shadow-sm">
+                                    <item.icon className="w-5 h-5 text-slate-400 group-hover:text-[#111] transition-colors duration-300" strokeWidth={1.5} />
                                 </div>
                             </div>
 
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-serif text-slate-900 mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                            <div className="relative z-10 mt-auto">
+                                <h3 className="text-3xl font-serif text-white mb-4 group-hover:translate-x-1 transition-transform duration-300">
                                     {item.title}
                                 </h3>
-                                <div className="flex items-end justify-between">
-                                    <p className="text-slate-500 font-light text-sm max-w-[80%] leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-                                        {item.desc}
-                                    </p>
-                                    <ArrowRight className="w-4 h-4 text-slate-900 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                <p className="text-slate-400 font-light text-base leading-relaxed mb-8 group-hover:text-slate-200 transition-colors duration-300 line-clamp-2">
+                                    {item.desc}
+                                </p>
+                                <div className="flex items-center gap-3 text-sm font-bold text-white transition-all duration-300">
+                                    {t('housing_association.actions.learn_more')}
+                                    <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-white group-hover:text-[#111] transition-all duration-300">
+                                        <ArrowRight className="w-4 h-4 -ml-0.5 group-hover:ml-0 transition-all" />
+                                    </div>
                                 </div>
                             </div>
                         </Link>

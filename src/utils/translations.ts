@@ -402,6 +402,9 @@ export const translations = {
                 book_demo: "Book a Demo",
                 view_pricing: "View Pricing"
             },
+            actions: {
+                learn_more: "Learn More"
+            },
             marquee: {
                 system_online: "System Online",
                 secure: "Secure",
@@ -808,7 +811,7 @@ export const translations = {
             list_10: "Los consumidores pueden contactarnos en cualquier momento para solicitar que eliminemos la información de contacto que nos han proporcionado; consulte la sección de elección/exclusión a continuación.",
             disclaimer: "Tenga en cuenta: si se comunica con nosotros a través de este sitio, es posible que su comunicación no sea tratada como privilegiada o confidencial. Si se comunica con nosotros a través de este sitio en un asunto o condición por la cual ya lo representamos o tratamos, recuerde que el correo electrónico e Internet y los formularios de contacto no son seguros por naturaleza y debe evitar enviar mensajes de Internet confidenciales o sensibles.",
             sharing_title: "Intercambio de Información",
-            sharing_text: "No vendemos, intercambiamos ni transferimos de otro modo su información de identificación personal de los consumidores a terceros. Esto no incluye a terceros de confianza que nos ayudan a operar nuestro sitio web, realizar nuestro negocio o servir a los consumidores, siempre que dichas partes acuerden mantener esta información confidencial. También podemos divulgar su información cuando creemos que la divulgación es apropiada para cumplir con la ley, hacer cumplir las políticas de nuestro sitio o proteger nuestros derechos, propiedad o seguridad, o los de otros. Sin embargo, la información del visitante no identificable personalmente se puede proporcionar a otras partes para marketing, publicidad u otros usos.",
+            sharing_text: "No vendemos, intercambiamos ni transferimos de otro modo su información de identificación personal de los consumidores a terceros. Esto no incluye a terceros de confianza que nos ayudan a operar nuestro sitio web, realizar nuestro negocio o servir a los consumidores, siempre que dichas partes acuerden mantener esta información confidencial. También podemos divulgar su información cuando creemos que la divulgación es apropiada para cumplir con la ley, hacer cumplir las políticas de nuestro sitio o proteger nuestros derechos, propiedad o seguridad, o los de otros. Sin embargo, la información del visitante no identificable personalmente se puede proporcionar a otras partes para marketing, publicidad o otros usos.",
             security_title: "Seguridad",
             security_text: "Este sitio cuenta con medidas de seguridad para proteger la pérdida, el mal uso y la alteración de la información bajo nuestro control. Almacenamos toda la información del usuario en bases de datos protegidas mediante una variedad de controles de acceso, además de estar ubicadas físicamente en una instalación segura. Se accede a estos datos solo para los fines especificados en esta política de privacidad.",
             opt_out_title: "Elección/Exclusión",
@@ -987,8 +990,11 @@ export const translations = {
                 book_demo: "Reservar Demo",
                 view_pricing: "Ver Precios"
             },
+            actions: {
+                learn_more: "Saber Más"
+            },
             marquee: {
-                system_online: "Sistema en Línea",
+                system_online: "Sistema En Línea",
                 secure: "Seguro",
                 connected: "Conectado",
                 live: "En Vivo"
@@ -1572,6 +1578,9 @@ export const translations = {
                 book_demo: "Boka Demo",
                 view_pricing: "Se Priser"
             },
+            actions: {
+                learn_more: "Läs Mer"
+            },
             marquee: {
                 system_online: "System Online",
                 secure: "Säker",
@@ -2065,7 +2074,7 @@ export const translations = {
                 kontrast: { title: "Kontrast", category: "Restaurant og Gæstfrihed", desc: "En premium nordindisk spiseoplevelse i Malmø, Sverige, der byder på autentisk indisk mad." },
                 secondskin_b2b: { title: "SecondskinStyle B2B", category: "E-Commerce og Sportstøj", desc: "Præstationsdrevet sportstøj udviklet til atleter, med vægt på teknisk design." },
                 secondskin: { title: "SecondskinStyle", category: "Forbruger Sportstøj", desc: "Premium sportstøjsmærke fokuseret på komfort, holdbarhed og stil." },
-                pipetechs: { title: "PipeTechs", category: "Rørledningsteknologi", desc: "Avancerede systemer til lækagedetektion i rørledninger ved hjælp af akustisk teknologi." },
+                pipetechs: { title: "PipeTechs", category: "Rørledningsteknologi", desc: "Avancerede systemer til lækagedetektion i rørledninger med hjælp af akustisk teknologi." },
                 growers: { title: "Growers Direct", category: "Landbrug og Detailhandel", desc: "Familiedrevet planteskole, der tilbyder et bredt udvalg af planter, keramik og ekspertrådgivning." },
                 timax: { title: "Timax-NL", category: "Byggerådgivning", desc: "Hollandsk rådgivningsvirksomhed med speciale i byggereglementer og energimærkning." },
                 sicci: { title: "Sicci", category: "Handelskammer", desc: "Singapore Indian Chamber of Commerce and Industry, der støtter forretningsvækst." },
@@ -2156,6 +2165,9 @@ export const translations = {
                 title_2: "Løfte?",
                 book_demo: "Book Demo",
                 view_pricing: "Se Priser"
+            },
+            actions: {
+                learn_more: "Læs Mere"
             },
             marquee: {
                 system_online: "System Online",

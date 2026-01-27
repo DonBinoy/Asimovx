@@ -12,6 +12,7 @@ import {
     Shield
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEffect } from "react";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -35,6 +36,10 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 
 export default function DocumentsPage() {
     const { t } = useLanguage();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">

@@ -9,9 +9,11 @@ import {
     Smartphone,
     CheckCircle2,
     Bell,
-    Users
+    Users,
+    ArrowRight
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEffect } from "react";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -35,6 +37,10 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 
 export default function CommunicationPage() {
     const { t } = useLanguage();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
@@ -192,16 +198,18 @@ export default function CommunicationPage() {
                                 benefit: t('housing_association.communication.features.items.vendor_comm.benefit')
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bg-[#F9F8F6] p-8 rounded-[2rem] hover:shadow-lg transition-shadow border border-slate-100">
-                                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 text-blue-500">
+                            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                                <div className="w-12 h-12 bg-blue-50/50 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 text-blue-500 relative z-10">
                                     <MessageSquare className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-bold text-[#111] mb-3">{item.title}</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed min-h-[3rem]">
+                                <h3 className="text-xl font-bold text-[#111] mb-3 relative z-10">{item.title}</h3>
+                                <p className="text-slate-600 mb-6 leading-relaxed min-h-[3rem] relative z-10">
                                     {item.desc}
                                 </p>
-                                <div className="flex items-start gap-2 text-sm text-blue-600 font-medium bg-blue-50/50 p-3 rounded-xl">
-                                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
+                                <div className="flex items-start gap-2 text-sm text-slate-500 font-medium bg-slate-50 p-3 rounded-xl relative z-10 mb-4">
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-blue-500" />
                                     <span>{item.benefit}</span>
                                 </div>
                             </div>
